@@ -50,7 +50,6 @@
     window.addEventListener("load", function () {
       let input = document.getElementById("camera_input");
       input.onchange = function () {
-        console.log(this.value);
         let output = document.getElementById("output");
         output.src = URL.createObjectURL(event.target.files[0]);
         output.onload = function () {
@@ -58,6 +57,15 @@
         };
         let text = document.getElementById("text");
         text.classList.remove("d-none");
+      };
+
+      let file_input = document.getElementById("file_input");
+      file_input.onchange = function () {
+        let output = document.getElementById("file_output");
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+          URL.revokeObjectURL(output.src);
+        };
       };
     });
   </script>
@@ -82,6 +90,16 @@
           type="file"
           accept="image/*"
           capture="camera"
+        />
+        <hr />
+        <label for="file_input" class="btn btn-success">Select photo</label>
+        <div id="text" class="d-none desc">DDD</div>
+        <img class="image" id="file_output" />
+        <input
+          id="file_input"
+          class="d-none"
+          type="file"
+          accept="image/*"
         />
       </div>
     </div>
