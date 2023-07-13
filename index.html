@@ -65,12 +65,16 @@
         };
       };
 
-      let toTestPageEl = document.getElementById("to_test_page");
-      toTestPageEl.onclick = () => {
-        console.log("To test page");
-        window.location.replace("/test.html");
-      };
+      // let toTestPageEl = document.getElementById("to_test_page");
+      // toTestPageEl.onclick = () => {
+      //   console.log("To test page");
+      //   window.location.replace("/popup/test.html");
+      // };
     });
+    const toTestPage = () => {
+      console.log("toTestPage");
+      window.location.replace("/popup/test.html");
+    };
   </script>
   <body>
     <div style="display: none">
@@ -84,7 +88,11 @@
     </div>
     <div class="container">
       <h1><a href="/test.html">To test page</a></h1>
-      <h1><a id="to_test_page" href>To test page (replace)</a></h1>
+      <h1>
+        <div id="to_test_page" href onclick="toTestPage()"
+          >To test page (replace)</div
+        >
+      </h1>
       <div class="main">
         <label for="camera_input" class="btn btn-success">Take a photo</label>
         <div id="text" class="d-none desc">DDD</div>
