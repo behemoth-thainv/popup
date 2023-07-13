@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <script async type="text/javascript" src="http://localhost:3000/p/upv4pSCxiB/main.js"></script> -->
-    <script async type="text/javascript" src="https://thai.liez.jp/p/jEbGh15f/main.js"></script>
+    <!-- <script async type="text/javascript" src="https://thai.liez.jp/p/jEbGh15f/main.js"></script> -->
     <script src="./script.js"></script>
     <link
       rel="stylesheet"
@@ -64,6 +64,12 @@
           URL.revokeObjectURL(output.src);
         };
       };
+
+      let toTestPageEl = document.getElementById("to_test_page");
+      toTestPageEl.onclick = () => {
+        console.log("To test page");
+        window.location.replace("/test.html");
+      };
     });
   </script>
   <body>
@@ -77,6 +83,8 @@
       <p>My paragraph.</p>
     </div>
     <div class="container">
+      <h1><a href="/test.html">To test page</a></h1>
+      <h1><a id="to_test_page" href>To test page (replace)</a></h1>
       <div class="main">
         <label for="camera_input" class="btn btn-success">Take a photo</label>
         <div id="text" class="d-none desc">DDD</div>
@@ -92,12 +100,7 @@
         <label for="file_input" class="btn btn-success">Select photo</label>
         <div id="text" class="d-none desc">DDD</div>
         <img class="image" id="file_output" />
-        <input
-          id="file_input"
-          class="d-none"
-          type="file"
-          accept="image/*"
-        />
+        <input id="file_input" class="d-none" type="file" accept="image/*" />
       </div>
     </div>
 
