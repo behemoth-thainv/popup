@@ -11,4 +11,4 @@ window.addEventListener("beforeunload", unloadCallback);
 window.addEventListener("popstate", confirmation());
 window.removeEventListener("beforeunload", unloadCallback);
 
-//  TEST 1
+//  TEST 2
