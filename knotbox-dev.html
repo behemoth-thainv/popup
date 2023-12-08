@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- <script async type="text/javascript" src="http://localhost:3000/p/upv4pSCxiB/main.js"></script> -->
+    <title>Knotbox-dev popup test</title>
     <script
       async
       type="text/javascript"
-      src="https://thai.liez.jp/p/jEbGh15f/main.js"
+      src="https://dev001.knotbox.tokyo/p/fK13bzcU/main.js"
     ></script>
-    <script src="./script.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -33,11 +32,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script
-      defer
-      type="text/javascript"
-      src="https://thai.liez.jp/retarget/main.js"
-    ></script>
   </head>
   <style>
     .main {
@@ -45,6 +39,7 @@
     }
     .image {
       width: 100%;
+      max-width: 100%;
     }
     .desc {
       font-size: 100px;
@@ -52,90 +47,26 @@
       color: #f20;
     }
   </style>
-  <script>
-    window.addEventListener("load", function () {
-      let input = document.getElementById("camera_input");
-      input.onchange = function () {
-        let output = document.getElementById("output");
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function () {
-          URL.revokeObjectURL(output.src);
-        };
-        let text = document.getElementById("text");
-        text.classList.remove("d-none");
-      };
 
-      let file_input = document.getElementById("file_input");
-      file_input.onchange = function () {
-        let output = document.getElementById("file_output");
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function () {
-          URL.revokeObjectURL(output.src);
-        };
-      };
-
-      // let toTestPageEl = document.getElementById("to_test_page");
-      // toTestPageEl.onclick = () => {
-      //   console.log("To test page");
-      //   window.location.replace("/popup/test.html");
-      // };
-
-      var form = document.getElementById("cpa-form");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        console.log(e);
-        alert("SUBMIT");
-      });
-    });
-    const toTestPage = () => {
-      console.log("toTestPage");
-      window.location.replace("/popup/test.html");
-    };
-  </script>
-  <body>
-    <!-- <img width="100" height="100" src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=11"/>
-    <img width="100" height="100" src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=12"/>
-    <img width="100" height="100" src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=13"/>
-    <img width="100" height="100" src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=14"/> -->
+  <body class="container">
     <div class="container">
-      <h1><a href="/test.html">To test page111</a></h1>
-      <h1>
-        <div id="to_test_page" href onclick="toTestPage()">
-          To test page (replace)
-        </div>
-      </h1>
-
-      <form id="cpa-form">
-        <input type="text" id="name" name="name" value="Bike" />
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-        <label for="vehicle1"> I have a bike</label><br />
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-        <label for="vehicle2"> I have a car</label><br />
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-        <label for="vehicle3"> I have a boat</label><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
-
-      <div class="main d-none">
-        <label for="camera_input" class="btn btn-success">Take a photo</label>
-        <div id="text" class="d-none desc">DDD</div>
-        <img class="image" id="output" />
-        <input
-          id="camera_input"
-          class="d-none"
-          type="file"
-          accept="image/*"
-          capture="camera"
-        />
-        <hr />
-        <label for="file_input" class="btn btn-success">Select photo</label>
-        <div id="text" class="d-none desc">DDD</div>
-        <img class="image" id="file_output" />
-        <input id="file_input" class="d-none" type="file" accept="image/*" />
-      </div>
+      <h1>Knotbox-stg popup test</h1>
     </div>
 
-    <hr />
+    <div class="image">
+      <img
+        width="500"
+        height="500"
+        src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=11"
+      />
+    </div>
+    <div class="image mt-5">
+      <img
+        width="500"
+        height="500"
+        src="https://assets.chaty.shop/thai/images/zYG5iRgQFXCctzhxdgSeRA.jpg?a=11"
+      />
+    </div>
 
     <div style="display: block">
       <p>
